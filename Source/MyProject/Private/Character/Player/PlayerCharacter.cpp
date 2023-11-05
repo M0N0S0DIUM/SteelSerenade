@@ -56,7 +56,20 @@ void APlayerCharacter::PossessedBy(AController* NewController)
 	APCPlayerState* PS = GetPlayerState<APCPlayerState>();
 	if (PS)
 	{
+		AbilitySystemComponent = Cast<UCharacterAbilitySystemComponent>(PS->GetAbilitySystemComponent());
+
+		PS->GetAbilitySystemComponent()->InitAbilityActorInfo(PS, this);
+
+		AttributeSetBase = PS->GetAttributeSetBase();
+
+		InitializeAttributes();
+
+		AbilitySystemComponent->SetTagMapCount(DeadTag, 0);
+
 		InitStartingValues(PS);
+
+		SetHealth(GetMaxHealth());
+		SetResonance(GetMaxResonance());
 
 		AddStartupEffects();
 		AddCharacterAbilities();
@@ -155,6 +168,7 @@ void APlayerCharacter::OnRep_PlayerState()
 	}
 
 }
+
 
 void APlayerCharacter::InitStartingValues(APCPlayerState* PS)
 {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
 	"FileVersion": 3,
 	"EngineAssociation": "5.3",
@@ -53,60 +52,4 @@
 			"Enabled": true
 		}
 	]
-=======
-{
-	"FileVersion": 3,
-	"EngineAssociation": "5.3",
-	"Category": "",
-	"Description": "",
-	"Modules": [
-		{
-			"Name": "MyProject",
-			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine",
-				"GameplayAbilities",
-				"AIModule"
-			]
-		}
-	],
-	"Plugins": [
-		{
-			"Name": "ModelingToolsEditorMode",
-			"Enabled": true,
-			"TargetAllowList": [
-				"Editor"
-			]
-		},
-		{
-			"Name": "GameFeatures",
-			"Enabled": true
-		},
-		{
-			"Name": "GameplayAbilities",
-			"Enabled": true
-		},
-		{
-			"Name": "AbilitySystemGameFeatureActions",
-			"Enabled": true
-		},
-		{
-			"Name": "ModularGameplay",
-			"Enabled": true
-		},
-		{
-			"Name": "WidgetEditorToolPalette",
-			"Enabled": true
-		},
-		{
-			"Name": "AnimationWarping",
-			"Enabled": true
-		},
-		{
-			"Name": "AnimationLocomotionLibrary",
-			"Enabled": true
-		}
-	]
->>>>>>> 8b49c783a667285d3d1a98eb1177f0081f70b4d7
 }
